@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\FireAndIceController;
+use App\Http\Controllers\Api\v1\BooksController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 Route::get('external-books', FireAndIceController::class);
+Route::resource('v1/books', BooksController::class);
