@@ -2071,6 +2071,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2290,6 +2298,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2316,6 +2327,52 @@ __webpack_require__.r(__webpack_exports__);
         _this2.books.splice(i, 1);
       });
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/app.js":
+/*!*****************************!*\
+  !*** ./resources/js/app.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue */ "./resources/js/App.vue");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+
+
+
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_6__["default"].component('v-select', (vue_select__WEBPACK_IMPORTED_MODULE_4___default()));
+vue__WEBPACK_IMPORTED_MODULE_6__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_6__["default"].use(vue_axios__WEBPACK_IMPORTED_MODULE_1__["default"], (axios__WEBPACK_IMPORTED_MODULE_2___default()));
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]({
+  mode: 'history',
+  routes: _routes__WEBPACK_IMPORTED_MODULE_3__.routes
+});
+var app = new vue__WEBPACK_IMPORTED_MODULE_6__["default"]({
+  el: '#app',
+  router: router,
+  render: function render(h) {
+    return h(_App_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
   }
 });
 
@@ -20447,6 +20504,19 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./resources/scss/app.scss":
+/*!*********************************!*\
+  !*** ./resources/scss/app.scss ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -21300,7 +21370,32 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [_c("router-view")], 1)
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "flex justify-between bg-gray-800 p-5 shadow-md" },
+      [
+        _c(
+          "router-link",
+          { staticClass: "text-gray-100", attrs: { to: { name: "home" } } },
+          [
+            _c("h3", { staticClass: "font-semibold text-lg text-gray-50" }, [
+              _vm._v("Booky")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "router-link",
+          { staticClass: "text-gray-100", attrs: { to: { name: "add" } } },
+          [_vm._v(" + Add")]
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "p-5" }, [_c("router-view")], 1)
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -21328,11 +21423,12 @@ var render = function() {
   return _c("div", [
     _c("button", { on: { click: _vm.back } }, [_vm._v("Back")]),
     _vm._v(" "),
-    _c("h3", [_vm._v("Add")]),
+    _c("h3", { staticClass: "text-2xl text-gray-800 mb-2" }, [_vm._v("Add")]),
     _vm._v(" "),
     _c(
       "form",
       {
+        staticClass: "w-full md:w-1/2 lg:w-1/3",
         on: {
           submit: function($event) {
             $event.preventDefault()
@@ -21341,8 +21437,15 @@ var render = function() {
         }
       },
       [
-        _c("div", [
-          _c("label", [_vm._v("Name")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "name" }
+            },
+            [_vm._v("Name")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21353,7 +21456,8 @@ var render = function() {
                 expression: "book.name"
               }
             ],
-            attrs: { type: "text" },
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
+            attrs: { type: "text", placeholder: "Enter book name" },
             domProps: { value: _vm.book.name },
             on: {
               input: function($event) {
@@ -21366,8 +21470,15 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", [
-          _c("label", [_vm._v("ISBN")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "isbn" }
+            },
+            [_vm._v("ISBN")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21378,7 +21489,8 @@ var render = function() {
                 expression: "book.isbn"
               }
             ],
-            attrs: { type: "text" },
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
+            attrs: { type: "text", placeholder: "Enter ISBN" },
             domProps: { value: _vm.book.isbn },
             on: {
               input: function($event) {
@@ -21393,8 +21505,16 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
+          { staticClass: "mb-4" },
           [
-            _c("label", [_vm._v("Authors")]),
+            _c(
+              "label",
+              {
+                staticClass: "block text-gray-600 text-sm",
+                attrs: { for: "authos" }
+              },
+              [_vm._v("Authors")]
+            ),
             _vm._v(" "),
             _c("v-select", {
               attrs: { taggable: "", multiple: "" },
@@ -21410,8 +21530,15 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("div", [
-          _c("label", [_vm._v("Country")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "country" }
+            },
+            [_vm._v("Country")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21422,7 +21549,8 @@ var render = function() {
                 expression: "book.country"
               }
             ],
-            attrs: { type: "text" },
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
+            attrs: { type: "text", placeholder: "Enter country" },
             domProps: { value: _vm.book.country },
             on: {
               input: function($event) {
@@ -21435,8 +21563,15 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", [
-          _c("label", [_vm._v("Pages")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "number_of_pages" }
+            },
+            [_vm._v("Pages")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21447,7 +21582,8 @@ var render = function() {
                 expression: "book.number_of_pages"
               }
             ],
-            attrs: { type: "text" },
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
+            attrs: { type: "text", placeholder: "Enter number of pages" },
             domProps: { value: _vm.book.number_of_pages },
             on: {
               input: function($event) {
@@ -21460,8 +21596,15 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", [
-          _c("label", [_vm._v("Publisher")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "publisher" }
+            },
+            [_vm._v("Publisher")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21472,7 +21615,8 @@ var render = function() {
                 expression: "book.publisher"
               }
             ],
-            attrs: { type: "text" },
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
+            attrs: { type: "text", placeholder: "Enter publisher" },
             domProps: { value: _vm.book.publisher },
             on: {
               input: function($event) {
@@ -21487,8 +21631,16 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
+          { staticClass: "mb-4" },
           [
-            _c("label", [_vm._v("Release Date")]),
+            _c(
+              "label",
+              {
+                staticClass: "block text-gray-600 text-sm",
+                attrs: { for: "release_date" }
+              },
+              [_vm._v("Release Date")]
+            ),
             _vm._v(" "),
             _c("date-picker", {
               attrs: {
@@ -21511,7 +21663,11 @@ var render = function() {
         _vm._v(" "),
         _c(
           "button",
-          { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+          {
+            staticClass:
+              "bg-green-500 text-green-50 px-3 py-1 rounded hover:bg-green-600",
+            attrs: { type: "submit" }
+          },
           [_vm._v("Add Book")]
         )
       ]
@@ -21542,13 +21698,23 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("button", { on: { click: _vm.back } }, [_vm._v("Back")]),
+    _c(
+      "button",
+      {
+        staticClass: "text-gray-500 hover:text-gray-700 mb-2",
+        on: { click: _vm.back }
+      },
+      [_vm._v("≺ Back")]
+    ),
     _vm._v(" "),
-    _c("h3", [_vm._v("Edit")]),
+    _c("h3", { staticClass: "text-2xl text-gray-800 mb-2" }, [
+      _vm._v("Update Book")
+    ]),
     _vm._v(" "),
     _c(
       "form",
       {
+        staticClass: "w-full md:w-1/2 lg:w-1/3",
         on: {
           submit: function($event) {
             $event.preventDefault()
@@ -21557,8 +21723,15 @@ var render = function() {
         }
       },
       [
-        _c("div", [
-          _c("label", [_vm._v("Name")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "name" }
+            },
+            [_vm._v("Name")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21569,6 +21742,7 @@ var render = function() {
                 expression: "book.name"
               }
             ],
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
             attrs: { type: "text" },
             domProps: { value: _vm.book.name },
             on: {
@@ -21582,8 +21756,15 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", [
-          _c("label", [_vm._v("ISBN")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "isbn" }
+            },
+            [_vm._v("ISBN")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21594,6 +21775,7 @@ var render = function() {
                 expression: "book.isbn"
               }
             ],
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
             attrs: { type: "text" },
             domProps: { value: _vm.book.isbn },
             on: {
@@ -21609,8 +21791,16 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
+          { staticClass: "mb-4" },
           [
-            _c("label", [_vm._v("Authors")]),
+            _c(
+              "label",
+              {
+                staticClass: "block text-gray-600 text-sm",
+                attrs: { for: "authos" }
+              },
+              [_vm._v("Authors")]
+            ),
             _vm._v(" "),
             _c("v-select", {
               attrs: { taggable: "", multiple: "" },
@@ -21626,8 +21816,15 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("div", [
-          _c("label", [_vm._v("Country")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "country" }
+            },
+            [_vm._v("Country")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21638,6 +21835,7 @@ var render = function() {
                 expression: "book.country"
               }
             ],
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
             attrs: { type: "text" },
             domProps: { value: _vm.book.country },
             on: {
@@ -21651,8 +21849,15 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", [
-          _c("label", [_vm._v("Pages")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "number_of_pages" }
+            },
+            [_vm._v("Pages")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21663,6 +21868,7 @@ var render = function() {
                 expression: "book.number_of_pages"
               }
             ],
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
             attrs: { type: "text" },
             domProps: { value: _vm.book.number_of_pages },
             on: {
@@ -21676,8 +21882,15 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", [
-          _c("label", [_vm._v("Publisher")]),
+        _c("div", { staticClass: "mb-4" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-gray-600 text-sm",
+              attrs: { for: "publisher" }
+            },
+            [_vm._v("Publisher")]
+          ),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -21688,6 +21901,7 @@ var render = function() {
                 expression: "book.publisher"
               }
             ],
+            staticClass: "border rounded w-full appearance-none px-2 py-1",
             attrs: { type: "text" },
             domProps: { value: _vm.book.publisher },
             on: {
@@ -21703,8 +21917,16 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
+          { staticClass: "mb-4" },
           [
-            _c("label", [_vm._v("Release Date")]),
+            _c(
+              "label",
+              {
+                staticClass: "block text-gray-600 text-sm",
+                attrs: { for: "release_date" }
+              },
+              [_vm._v("Release Date")]
+            ),
             _vm._v(" "),
             _c("date-picker", {
               attrs: {
@@ -21727,8 +21949,12 @@ var render = function() {
         _vm._v(" "),
         _c(
           "button",
-          { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-          [_vm._v("Update Book")]
+          {
+            staticClass:
+              "bg-green-500 text-green-50 px-3 py-1 rounded hover:bg-green-600",
+            attrs: { type: "submit" }
+          },
+          [_vm._v("Update")]
         )
       ]
     )
@@ -21760,41 +21986,61 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("h3", [_vm._v("Books")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: { name: "add" } } }, [_vm._v("Add")]),
-      _vm._v(" "),
       _vm.books.length == 0
         ? _c("div", [_vm._v("\n        No books found\n    ")])
         : _vm._e(),
       _vm._v(" "),
       _vm._l(_vm.books, function(book) {
-        return _c(
-          "div",
-          { key: book.id },
-          [
-            _c("p", [_vm._v(_vm._s(book.name))]),
-            _vm._v(" "),
-            _c(
-              "router-link",
-              { attrs: { to: { name: "edit", params: { id: book.id } } } },
-              [_vm._v("Edit")]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                on: {
-                  click: function($event) {
-                    return _vm.deleteBook(book.id)
+        return _c("div", { key: book.id, staticClass: "border-b py-2 mb-4" }, [
+          _c("h2", { staticClass: "text-gray-800 text-2xl" }, [
+            _vm._v(_vm._s(book.name))
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex flex-wrap mb-1" },
+            _vm._l(book.authors, function(author) {
+              return _c(
+                "h3",
+                {
+                  key: author.id,
+                  staticClass:
+                    "px-2 py-1 mb-1 font-light text-sm rounded-full mr-1 border"
+                },
+                [_vm._v(_vm._s(author))]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "font-light text-green-500 hover:text-green-600",
+                  attrs: { to: { name: "edit", params: { id: book.id } } }
+                },
+                [_vm._v("Edit")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "font-light text-red-500 hover:text-red-600",
+                  on: {
+                    click: function($event) {
+                      return _vm.deleteBook(book.id)
+                    }
                   }
-                }
-              },
-              [_vm._v("Delete")]
-            )
-          ],
-          1
-        )
+                },
+                [_vm._v("Delete")]
+              )
+            ],
+            1
+          )
+        ])
       })
     ],
     2
@@ -41135,10 +41381,45 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/amd options */
 /******/ 	(() => {
 /******/ 		__webpack_require__.amdO = {};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
@@ -41217,51 +41498,68 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/app": 0,
+/******/ 			"css/app": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue */ "./resources/js/App.vue");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
-
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-
-
-
-
-
-
-
-vue__WEBPACK_IMPORTED_MODULE_6__["default"].component('v-select', (vue_select__WEBPACK_IMPORTED_MODULE_4___default()));
-vue__WEBPACK_IMPORTED_MODULE_6__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]);
-vue__WEBPACK_IMPORTED_MODULE_6__["default"].use(vue_axios__WEBPACK_IMPORTED_MODULE_1__["default"], (axios__WEBPACK_IMPORTED_MODULE_2___default()));
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]({
-  mode: 'history',
-  routes: _routes__WEBPACK_IMPORTED_MODULE_3__.routes
-});
-var app = new vue__WEBPACK_IMPORTED_MODULE_6__["default"]({
-  el: '#app',
-  router: router,
-  render: function render(h) {
-    return h(_App_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
-  }
-});
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/scss/app.scss")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
 /******/ })()
 ;
