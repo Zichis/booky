@@ -17,12 +17,13 @@
 export default {
     data() {
         return {
-            books: []
+            books: [],
+            ROOT_URL: process.env.MIX_APP_URL_ROOT
         }
     },
     mounted() {
         this.axios
-            .get(`http://fireandice.test/api/v1/books`)
+            .get(this.ROOT_URL)
             .then((response) => {
                 this.books = response.data.data;
             });
@@ -30,7 +31,7 @@ export default {
     methods: {
         deleteBook(id) {
             this.axios
-                .delete('http://fireandice.test/api/v1/books/' + id)
+                .delete(this.ROOT_URL + id)
                 .then(response => {
                     let i = this.books.map(item => item.id).indexOf(id);
                     this.books.splice(i,1);

@@ -50,13 +50,14 @@ export default {
     components: { DatePicker },
     data() {
         return {
-            book: {}
+            book: {},
+            ROOT_URL: process.env.MIX_APP_URL_ROOT
         }
     },
     methods: {
         addBook() {
             this.axios
-                .post(`http://fireandice.test/api/v1/books`, this.book)
+                .post(this.ROOT_URL, this.book)
                 .then((response) => {
                     this.$router.push({name: 'home'});
                 })

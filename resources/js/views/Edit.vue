@@ -50,12 +50,13 @@ export default {
     components: { DatePicker },
     data() {
         return {
-            book: {}
+            book: {},
+            ROOT_URL: process.env.MIX_APP_URL_ROOT
         }
     },
     mounted() {
         this.axios
-                .get(`http://fireandice.test/api/v1/books/${this.$route.params.id}`)
+                .get(this.ROOT_URL + this.$route.params.id)
                 .then((response) => {
                     let book = response.data.data;
 
@@ -69,7 +70,7 @@ export default {
     methods: {
         updateBook() {
             this.axios
-                .patch(`http://fireandice.test/api/v1/books/${this.$route.params.id}`, this.book)
+                .patch(this.ROOT_URL + this.$route.params.id, this.book)
                 .then((response) => {
                     this.$router.push({name: 'home'});
                 })

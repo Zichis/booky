@@ -2140,14 +2140,15 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      book: {}
+      book: {},
+      ROOT_URL: "http://fireAndIce.test/api/v1/books/"
     };
   },
   methods: {
     addBook: function addBook() {
       var _this = this;
 
-      this.axios.post("http://fireandice.test/api/v1/books", this.book).then(function (response) {
+      this.axios.post(this.ROOT_URL, this.book).then(function (response) {
         _this.$router.push({
           name: 'home'
         });
@@ -2226,13 +2227,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      book: {}
+      book: {},
+      ROOT_URL: "http://fireAndIce.test/api/v1/books/"
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-    this.axios.get("http://fireandice.test/api/v1/books/".concat(this.$route.params.id)).then(function (response) {
+    this.axios.get(this.ROOT_URL + this.$route.params.id).then(function (response) {
       var book = response.data.data;
 
       if (book.length == 0) {
@@ -2248,7 +2250,7 @@ __webpack_require__.r(__webpack_exports__);
     updateBook: function updateBook() {
       var _this2 = this;
 
-      this.axios.patch("http://fireandice.test/api/v1/books/".concat(this.$route.params.id), this.book).then(function (response) {
+      this.axios.patch(this.ROOT_URL + this.$route.params.id, this.book).then(function (response) {
         _this2.$router.push({
           name: 'home'
         });
@@ -2291,13 +2293,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      books: []
+      books: [],
+      ROOT_URL: "http://fireAndIce.test/api/v1/books/"
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-    this.axios.get("http://fireandice.test/api/v1/books").then(function (response) {
+    this.axios.get(this.ROOT_URL).then(function (response) {
       _this.books = response.data.data;
     });
   },
@@ -2305,7 +2308,7 @@ __webpack_require__.r(__webpack_exports__);
     deleteBook: function deleteBook(id) {
       var _this2 = this;
 
-      this.axios["delete"]('http://fireandice.test/api/v1/books/' + id).then(function (response) {
+      this.axios["delete"](this.ROOT_URL + id).then(function (response) {
         var i = _this2.books.map(function (item) {
           return item.id;
         }).indexOf(id);
