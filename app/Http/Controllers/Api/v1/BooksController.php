@@ -63,7 +63,7 @@ class BooksController extends Controller
         return response()->json([
             'status_code' => $this->statusCode,
             'status' => $this->statusText,
-            'data' => $book
+            'data' => ["book" => $book]
         ])->setStatusCode(201, 'success');
     }
 
@@ -136,12 +136,12 @@ class BooksController extends Controller
 
         try {
             $book->delete();
-            $this->statusCode = 204;
+            $this->statusCode = 200;
             $this->statusText = 'success';
-            $this->message = 'The book My First Book was updated successfully';
+            $this->message = 'The book My First Book was deleted successfully';
             $book = null;
-        } catch (Exception $e) {
-            Log::alert("Something went wrong. " . $e->getMessage());
+        } catch (Exception $exception) {
+            Log::alert("Something went wrong. " . $exception->getMessage());
         } catch (Error $error) {
             Log::alert("An error occured. " . $error->getMessage());
         }
