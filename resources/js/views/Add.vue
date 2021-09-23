@@ -51,7 +51,7 @@ export default {
     data() {
         return {
             book: {},
-            ROOT_URL: process.env.MIX_APP_URL_ROOT
+            ROOT_URL: process.env.MIX_API_URL_ROOT
         }
     },
     methods: {

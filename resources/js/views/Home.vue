@@ -18,7 +18,7 @@ export default {
     data() {
         return {
             books: [],
-            ROOT_URL: process.env.MIX_APP_URL_ROOT
+            ROOT_URL: process.env.MIX_API_URL_ROOT
         }
     },
     mounted() {
