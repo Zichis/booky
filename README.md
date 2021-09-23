@@ -15,8 +15,34 @@ It also has an endpoint that gets data from [FireAndIce API](https://anapioficea
 - [VueJs](https://vuejs.org/) (Frontend)
 
 ### Installation and setup
-- Clone the repository
-- CD into the project directory and run composer install
->`composer install`
-- Run npm install
->`npm install`
+- Clone the repository  
+`git clone https://github.com/Zichis/booky.git`
+
+- CD into the project directory and run composer install  
+`composer install`
+
+- Copy .env.example to .env  
+`cp .env.example .env`
+
+- Change the MIX_API_URL_ROOT variable in your .env to suit your server. (**IMPORTANT**)
+
+- Generate application key  
+`php artisan key:generate`
+
+- Create mysql database with the name **fireandice** (or you can change the name in your .env)
+
+- Also enter your database password in .env
+
+- Run migrations  
+`php artisan migrate`
+
+- Run your app  
+`php artisan serve`
+
+- Visit localhost:8000 (or the host you configured)
+
+### Testing
+- Create a database for testing with the name **fireandice_test** (or you can change the name in your .env)
+
+- Run tests  
+`composer app-test`
