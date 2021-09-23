@@ -3,7 +3,9 @@
 use App\Http\Controllers\Api\FireAndIceController;
 use App\Http\Controllers\Api\v1\BooksController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,10 @@ use Illuminate\Support\Facades\Route;
 /*Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });*/
+
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}
 
 Route::get('external-books', FireAndIceController::class);
 Route::resource('v1/books', BooksController::class);
