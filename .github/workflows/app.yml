@@ -6,6 +6,17 @@ on:
   pull_request:
     branches: [ master ]
 
+services:
+  mysql:
+    image: mysql:5.7
+    env:
+      MYSQL_DATABASE: fireandice_test
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+
 jobs:
   laravel-tests:
 
@@ -30,6 +41,6 @@ jobs:
         touch database/database.sqlite
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
-        DB_CONNECTION: sqlite
-        DB_DATABASE: database/database.sqlite
-      run: vendor/bin/phpunit
+        DB_CONNECTION: mysql_testing
+        DB_DATABASE: mysql
+      run: vendor/bin/phpunit tests/Feature
