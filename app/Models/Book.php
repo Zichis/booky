@@ -19,10 +19,11 @@ class Book extends Model
         'release_date'
     ];
 
-    protected $hidden = ['id'];
+    // protected $hidden = ['id'];
 
     protected $casts = [
-        'authors' => 'array'
+        'authors' => 'array',
+        'release_date' => 'date:Y-m-d'
     ];
 
     public $timestamps = false;
