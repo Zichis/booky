@@ -1,44 +1,44 @@
 <template>
     <div>
         <button @click="back">Back</button>
-        <h3>Add</h3>
-            <form @submit.prevent="addBook">
-                <div>
-                    <label>Name</label>
-                    <input type="text" v-model="book.name">
-                </div>
-                <div>
-                    <label>ISBN</label>
-                    <input type="text" v-model="book.isbn">
-                </div>
-                <div>
-                    <label>Authors</label>
-                    <v-select taggable multiple v-model="book.authors"/>
-                </div>
-                <div>
-                    <label>Country</label>
-                    <input type="text" v-model="book.country">
-                </div>
-                <div>
-                    <label>Pages</label>
-                    <input type="text" v-model="book.number_of_pages">
-                </div>
-                <div>
-                    <label>Publisher</label>
-                    <input type="text" v-model="book.publisher">
-                </div>
-                <div>
-                    <label>Release Date</label>
-                    <date-picker
-                        v-model="book.release_date"
-                        value-type="format"
-                        format="YYYY-MM-DD"
-                        type="date"
-                        placeholder="Select date"
-                    ></date-picker>
-                </div>
-                <button type="submit" class="btn btn-primary">Add Book</button>
-            </form>
+        <h3 class="text-2xl text-gray-800 mb-2">Add</h3>
+        <form @submit.prevent="addBook" class="w-full md:w-1/2 lg:w-1/3">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-600 text-sm">Name</label>
+                <input class="border rounded w-full appearance-none px-2 py-1" type="text" v-model="book.name" placeholder="Enter book name">
+            </div>
+            <div class="mb-4">
+                <label for="isbn" class="block text-gray-600 text-sm">ISBN</label>
+                <input class="border rounded w-full appearance-none px-2 py-1" type="text" v-model="book.isbn" placeholder="Enter ISBN">
+            </div>
+            <div class="mb-4">
+                <label for="authos" class="block text-gray-600 text-sm">Authors</label>
+                <v-select class="" taggable multiple v-model="book.authors"/>
+            </div>
+            <div class="mb-4">
+                <label for="country" class="block text-gray-600 text-sm">Country</label>
+                <input class="border rounded w-full appearance-none px-2 py-1" type="text" v-model="book.country" placeholder="Enter country">
+            </div>
+            <div class="mb-4">
+                <label for="number_of_pages" class="block text-gray-600 text-sm">Pages</label>
+                <input class="border rounded w-full appearance-none px-2 py-1" type="text" v-model="book.number_of_pages" placeholder="Enter number of pages">
+            </div>
+            <div class="mb-4">
+                <label for="publisher" class="block text-gray-600 text-sm">Publisher</label>
+                <input class="border rounded w-full appearance-none px-2 py-1" type="text" v-model="book.publisher" placeholder="Enter publisher">
+            </div>
+            <div class="mb-4">
+                <label for="release_date" class="block text-gray-600 text-sm">Release Date</label>
+                <date-picker
+                    v-model="book.release_date"
+                    value-type="format"
+                    format="YYYY-MM-DD"
+                    type="date"
+                    placeholder="Select date"
+                ></date-picker>
+            </div>
+            <button type="submit" class="bg-green-500 text-green-50 px-3 py-1 rounded hover:bg-green-600">Add Book</button>
+        </form>
     </div>
 </template>
 

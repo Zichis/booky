@@ -1,14 +1,17 @@
 <template>
     <div>
-        <h3>Books</h3>
-        <router-link :to="{ name: 'add' }">Add</router-link>
         <div v-if="books.length == 0">
             No books found
         </div>
-        <div v-for="book in books" :key="book.id">
-            <p>{{ book.name }}</p>
-            <router-link :to="{ name: 'edit', params: { id: book.id } }">Edit</router-link>
-            <button @click="deleteBook(book.id)">Delete</button>
+        <div class="border-b py-2 mb-4" v-for="book in books" :key="book.id">
+            <h2 class="text-gray-800 text-2xl">{{ book.name }}</h2>
+            <div class="flex flex-wrap mb-1">
+                <h3 class="px-2 py-1 mb-1 font-light text-sm rounded-full mr-1 border" v-for="author in book.authors" :key="author.id">{{ author }}</h3>
+            </div>
+            <div>
+                <router-link class="font-light text-green-500 hover:text-green-600" :to="{ name: 'edit', params: { id: book.id } }">Edit</router-link>
+                <button class="font-light text-red-500 hover:text-red-600" @click="deleteBook(book.id)">Delete</button>
+            </div>
         </div>
     </div>
 </template>
