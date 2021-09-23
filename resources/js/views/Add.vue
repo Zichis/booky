@@ -51,13 +51,12 @@ export default {
     data() {
         return {
             book: {},
-            ROOT_URL: process.env.MIX_API_URL_ROOT
         }
     },
     methods: {
         addBook() {
             this.axios
-                .post(this.ROOT_URL, this.book)
+                .post('/api/v1/books/', this.book)
                 .then((response) => {
                     this.$router.push({name: 'home'});
                 })

@@ -21,12 +21,11 @@ export default {
     data() {
         return {
             books: [],
-            ROOT_URL: process.env.MIX_API_URL_ROOT
         }
     },
     mounted() {
         this.axios
-            .get(this.ROOT_URL)
+            .get('/api/v1/books/')
             .then((response) => {
                 this.books = response.data.data;
             });
@@ -34,7 +33,7 @@ export default {
     methods: {
         deleteBook(id) {
             this.axios
-                .delete(this.ROOT_URL + id)
+                .delete('/api/v1/books/' + id)
                 .then(response => {
                     let i = this.books.map(item => item.id).indexOf(id);
                     this.books.splice(i,1);

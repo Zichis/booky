@@ -50,13 +50,12 @@ export default {
     components: { DatePicker },
     data() {
         return {
-            book: {},
-            ROOT_URL: process.env.MIX_API_URL_ROOT
+            book: {}
         }
     },
     mounted() {
         this.axios
-                .get(this.ROOT_URL + this.$route.params.id)
+                .get('/api/v1/books/' + this.$route.params.id)
                 .then((response) => {
                     let book = response.data.data;
 
@@ -70,7 +69,7 @@ export default {
     methods: {
         updateBook() {
             this.axios
-                .patch(this.ROOT_URL + this.$route.params.id, this.book)
+                .patch('/api/v1/books/' + this.$route.params.id, this.book)
                 .then((response) => {
                     this.$router.push({name: 'home'});
                 })
