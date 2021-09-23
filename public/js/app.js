@@ -2321,52 +2321,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue */ "./resources/js/App.vue");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
-
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-
-
-
-
-
-
-
-vue__WEBPACK_IMPORTED_MODULE_6__["default"].component('v-select', (vue_select__WEBPACK_IMPORTED_MODULE_4___default()));
-vue__WEBPACK_IMPORTED_MODULE_6__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]);
-vue__WEBPACK_IMPORTED_MODULE_6__["default"].use(vue_axios__WEBPACK_IMPORTED_MODULE_1__["default"], (axios__WEBPACK_IMPORTED_MODULE_2___default()));
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]({
-  mode: 'history',
-  routes: _routes__WEBPACK_IMPORTED_MODULE_3__.routes
-});
-var app = new vue__WEBPACK_IMPORTED_MODULE_6__["default"]({
-  el: '#app',
-  router: router,
-  render: function render(h) {
-    return h(_App_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
-  }
-});
-
-/***/ }),
-
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -2448,7 +2402,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".v-select{position:relative;font-family:inherit}.v-select,.v-select *{box-sizing:border-box}@-webkit-keyframes vSelectSpinner{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}@keyframes vSelectSpinner{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.vs__fade-enter-active,.vs__fade-leave-active{pointer-events:none;transition:opacity .15s cubic-bezier(1,.5,.8,1)}.vs__fade-enter,.vs__fade-leave-to{opacity:0}.vs--disabled .vs__clear,.vs--disabled .vs__dropdown-toggle,.vs--disabled .vs__open-indicator,.vs--disabled .vs__search,.vs--disabled .vs__selected{cursor:not-allowed;background-color:#f8f8f8}.v-select[dir=rtl] .vs__actions{padding:0 3px 0 6px}.v-select[dir=rtl] .vs__clear{margin-left:6px;margin-right:0}.v-select[dir=rtl] .vs__deselect{margin-left:0;margin-right:2px}.v-select[dir=rtl] .vs__dropdown-menu{text-align:right}.vs__dropdown-toggle{-webkit-appearance:none;-moz-appearance:none;appearance:none;display:flex;padding:0 0 4px;background:none;border:1px solid rgba(60,60,60,.26);border-radius:4px;white-space:normal}.vs__selected-options{display:flex;flex-basis:100%;flex-grow:1;flex-wrap:wrap;padding:0 2px;position:relative}.vs__actions{display:flex;align-items:center;padding:4px 6px 0 3px}.vs--searchable .vs__dropdown-toggle{cursor:text}.vs--unsearchable .vs__dropdown-toggle{cursor:pointer}.vs--open .vs__dropdown-toggle{border-bottom-color:transparent;border-bottom-left-radius:0;border-bottom-right-radius:0}.vs__open-indicator{fill:rgba(60,60,60,.5);transform:scale(1);transition:transform .15s cubic-bezier(1,-.115,.975,.855);transition-timing-function:cubic-bezier(1,-.115,.975,.855)}.vs--open .vs__open-indicator{transform:rotate(180deg) scale(1)}.vs--loading .vs__open-indicator{opacity:0}.vs__clear{fill:rgba(60,60,60,.5);padding:0;border:0;background-color:transparent;cursor:pointer;margin-right:8px}.vs__dropdown-menu{display:block;box-sizing:border-box;position:absolute;top:calc(100% - 1px);left:0;z-index:1000;padding:5px 0;margin:0;width:100%;max-height:350px;min-width:160px;overflow-y:auto;box-shadow:0 3px 6px 0 rgba(0,0,0,.15);border:1px solid rgba(60,60,60,.26);border-top-style:none;border-radius:0 0 4px 4px;text-align:left;list-style:none;background:#fff}.vs__no-options{text-align:center}.vs__dropdown-option{line-height:1.42857143;display:block;padding:3px 20px;clear:both;color:#333;white-space:nowrap;cursor:pointer}.vs__dropdown-option--highlight{background:#5897fb;color:#fff}.vs__dropdown-option--disabled{background:inherit;color:rgba(60,60,60,.5);cursor:inherit}.vs__selected{display:flex;align-items:center;background-color:#f0f0f0;border:1px solid rgba(60,60,60,.26);border-radius:4px;color:#333;line-height:1.4;margin:4px 2px 0;padding:0 .25em;z-index:0}.vs__deselect{display:inline-flex;-webkit-appearance:none;-moz-appearance:none;appearance:none;margin-left:4px;padding:0;border:0;cursor:pointer;background:none;fill:rgba(60,60,60,.5);text-shadow:0 1px 0 #fff}.vs--single .vs__selected{background-color:transparent;border-color:transparent}.vs--single.vs--open .vs__selected{position:absolute;opacity:.4}.vs--single.vs--searching .vs__selected{display:none}.vs__search::-webkit-search-cancel-button{display:none}.vs__search::-ms-clear,.vs__search::-webkit-search-decoration,.vs__search::-webkit-search-results-button,.vs__search::-webkit-search-results-decoration{display:none}.vs__search,.vs__search:focus{-webkit-appearance:none;-moz-appearance:none;appearance:none;line-height:1.4;font-size:1em;border:1px solid transparent;border-left:none;outline:none;margin:4px 0 0;padding:0 7px;background:none;box-shadow:none;width:0;max-width:100%;flex-grow:1;z-index:1}.vs__search::-moz-placeholder{color:inherit}.vs__search:-ms-input-placeholder{color:inherit}.vs__search::placeholder{color:inherit}.vs--unsearchable .vs__search{opacity:1}.vs--unsearchable:not(.vs--disabled) .vs__search:hover{cursor:pointer}.vs--single.vs--searching:not(.vs--open):not(.vs--loading) .vs__search{opacity:.2}.vs__spinner{align-self:center;opacity:0;font-size:5px;text-indent:-9999em;overflow:hidden;border:.9em solid hsla(0,0%,39.2%,.1);border-left-color:rgba(60,60,60,.45);transform:translateZ(0);-webkit-animation:vSelectSpinner 1.1s linear infinite;animation:vSelectSpinner 1.1s linear infinite;transition:opacity .1s}.vs__spinner,.vs__spinner:after{border-radius:50%;width:5em;height:5em}.vs--loading .vs__spinner{opacity:1}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".v-select{\n  position:relative;\n  font-family:inherit\n}\n\n.v-select,.v-select *{\n  box-sizing:border-box\n}\n\n@-webkit-keyframes vSelectSpinner{\n  0%{\n    transform:rotate(0deg)\n  }\n\n  to{\n    transform:rotate(1turn)\n  }\n}\n\n@keyframes vSelectSpinner{\n  0%{\n    transform:rotate(0deg)\n  }\n\n  to{\n    transform:rotate(1turn)\n  }\n}\n\n.vs__fade-enter-active,.vs__fade-leave-active{\n  pointer-events:none;\n  transition:opacity .15s cubic-bezier(1,.5,.8,1)\n}\n\n.vs__fade-enter,.vs__fade-leave-to{\n  opacity:0\n}\n\n.vs--disabled .vs__clear,.vs--disabled .vs__dropdown-toggle,.vs--disabled .vs__open-indicator,.vs--disabled .vs__search,.vs--disabled .vs__selected{\n  cursor:not-allowed;\n  background-color:#f8f8f8\n}\n\n.v-select[dir=rtl] .vs__actions{\n  padding:0 3px 0 6px\n}\n\n.v-select[dir=rtl] .vs__clear{\n  margin-left:6px;\n  margin-right:0\n}\n\n.v-select[dir=rtl] .vs__deselect{\n  margin-left:0;\n  margin-right:2px\n}\n\n.v-select[dir=rtl] .vs__dropdown-menu{\n  text-align:right\n}\n\n.vs__dropdown-toggle{\n  -webkit-appearance:none;\n  -moz-appearance:none;\n  appearance:none;\n  display:flex;\n  padding:0 0 4px;\n  background:none;\n  border:1px solid rgba(60,60,60,.26);\n  border-radius:4px;\n  white-space:normal\n}\n\n.vs__selected-options{\n  display:flex;\n  flex-basis:100%;\n  flex-grow:1;\n  flex-wrap:wrap;\n  padding:0 2px;\n  position:relative\n}\n\n.vs__actions{\n  display:flex;\n  align-items:center;\n  padding:4px 6px 0 3px\n}\n\n.vs--searchable .vs__dropdown-toggle{\n  cursor:text\n}\n\n.vs--unsearchable .vs__dropdown-toggle{\n  cursor:pointer\n}\n\n.vs--open .vs__dropdown-toggle{\n  border-bottom-color:transparent;\n  border-bottom-left-radius:0;\n  border-bottom-right-radius:0\n}\n\n.vs__open-indicator{\n  fill:rgba(60,60,60,.5);\n  transform:scale(1);\n  transition:transform .15s cubic-bezier(1,-.115,.975,.855);\n  transition-timing-function:cubic-bezier(1,-.115,.975,.855)\n}\n\n.vs--open .vs__open-indicator{\n  transform:rotate(180deg) scale(1)\n}\n\n.vs--loading .vs__open-indicator{\n  opacity:0\n}\n\n.vs__clear{\n  fill:rgba(60,60,60,.5);\n  padding:0;\n  border:0;\n  background-color:transparent;\n  cursor:pointer;\n  margin-right:8px\n}\n\n.vs__dropdown-menu{\n  display:block;\n  box-sizing:border-box;\n  position:absolute;\n  top:calc(100% - 1px);\n  left:0;\n  z-index:1000;\n  padding:5px 0;\n  margin:0;\n  width:100%;\n  max-height:350px;\n  min-width:160px;\n  overflow-y:auto;\n  box-shadow:0 3px 6px 0 rgba(0,0,0,.15);\n  border:1px solid rgba(60,60,60,.26);\n  border-top-style:none;\n  border-radius:0 0 4px 4px;\n  text-align:left;\n  list-style:none;\n  background:#fff\n}\n\n.vs__no-options{\n  text-align:center\n}\n\n.vs__dropdown-option{\n  line-height:1.42857143;\n  display:block;\n  padding:3px 20px;\n  clear:both;\n  color:#333;\n  white-space:nowrap;\n  cursor:pointer\n}\n\n.vs__dropdown-option--highlight{\n  background:#5897fb;\n  color:#fff\n}\n\n.vs__dropdown-option--disabled{\n  background:inherit;\n  color:rgba(60,60,60,.5);\n  cursor:inherit\n}\n\n.vs__selected{\n  display:flex;\n  align-items:center;\n  background-color:#f0f0f0;\n  border:1px solid rgba(60,60,60,.26);\n  border-radius:4px;\n  color:#333;\n  line-height:1.4;\n  margin:4px 2px 0;\n  padding:0 .25em;\n  z-index:0\n}\n\n.vs__deselect{\n  display:inline-flex;\n  -webkit-appearance:none;\n  -moz-appearance:none;\n  appearance:none;\n  margin-left:4px;\n  padding:0;\n  border:0;\n  cursor:pointer;\n  background:none;\n  fill:rgba(60,60,60,.5);\n  text-shadow:0 1px 0 #fff\n}\n\n.vs--single .vs__selected{\n  background-color:transparent;\n  border-color:transparent\n}\n\n.vs--single.vs--open .vs__selected{\n  position:absolute;\n  opacity:.4\n}\n\n.vs--single.vs--searching .vs__selected{\n  display:none\n}\n\n.vs__search::-webkit-search-cancel-button{\n  display:none\n}\n\n.vs__search::-ms-clear,.vs__search::-webkit-search-decoration,.vs__search::-webkit-search-results-button,.vs__search::-webkit-search-results-decoration{\n  display:none\n}\n\n.vs__search,.vs__search:focus{\n  -webkit-appearance:none;\n  -moz-appearance:none;\n  appearance:none;\n  line-height:1.4;\n  font-size:1em;\n  border:1px solid transparent;\n  border-left:none;\n  outline:none;\n  margin:4px 0 0;\n  padding:0 7px;\n  background:none;\n  box-shadow:none;\n  width:0;\n  max-width:100%;\n  flex-grow:1;\n  z-index:1\n}\n\n.vs__search::-moz-placeholder{\n  color:inherit\n}\n\n.vs__search:-ms-input-placeholder{\n  color:inherit\n}\n\n.vs__search::placeholder{\n  color:inherit\n}\n\n.vs--unsearchable .vs__search{\n  opacity:1\n}\n\n.vs--unsearchable:not(.vs--disabled) .vs__search:hover{\n  cursor:pointer\n}\n\n.vs--single.vs--searching:not(.vs--open):not(.vs--loading) .vs__search{\n  opacity:.2\n}\n\n.vs__spinner{\n  align-self:center;\n  opacity:0;\n  font-size:5px;\n  text-indent:-9999em;\n  overflow:hidden;\n  border:.9em solid hsla(0,0%,39.2%,.1);\n  border-left-color:rgba(60,60,60,.45);\n  transform:translateZ(0);\n  -webkit-animation:vSelectSpinner 1.1s linear infinite;\n  animation:vSelectSpinner 1.1s linear infinite;\n  transition:opacity .1s\n}\n\n.vs__spinner,.vs__spinner:after{\n  border-radius:50%;\n  width:5em;\n  height:5em\n}\n\n.vs--loading .vs__spinner{\n  opacity:1\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2472,7 +2426,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".mx-icon-left:before,.mx-icon-right:before,.mx-icon-double-left:before,.mx-icon-double-right:before,.mx-icon-double-left:after,.mx-icon-double-right:after{content:\"\";position:relative;top:-1px;display:inline-block;width:10px;height:10px;vertical-align:middle;border-style:solid;border-color:currentColor;border-width:2px 0 0 2px;border-radius:1px;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transform-origin:center;transform-origin:center;-webkit-transform:rotate(-45deg) scale(0.7);transform:rotate(-45deg) scale(0.7)}.mx-icon-double-left:after{left:-4px}.mx-icon-double-right:before{left:4px}.mx-icon-right:before,.mx-icon-double-right:before,.mx-icon-double-right:after{-webkit-transform:rotate(135deg) scale(0.7);transform:rotate(135deg) scale(0.7)}.mx-btn{-webkit-box-sizing:border-box;box-sizing:border-box;line-height:1;font-size:14px;font-weight:500;padding:7px 15px;margin:0;cursor:pointer;background-color:transparent;outline:none;border:1px solid rgba(0,0,0,.1);border-radius:4px;color:#73879c;white-space:nowrap}.mx-btn:hover{border-color:#1284e7;color:#1284e7}.mx-btn-text{border:0;padding:0 4px;text-align:left;line-height:inherit}.mx-scrollbar{height:100%}.mx-scrollbar:hover .mx-scrollbar-track{opacity:1}.mx-scrollbar-wrap{height:100%;overflow-x:hidden;overflow-y:auto}.mx-scrollbar-track{position:absolute;top:2px;right:2px;bottom:2px;width:6px;z-index:1;border-radius:4px;opacity:0;-webkit-transition:opacity .24s ease-out;transition:opacity .24s ease-out}.mx-scrollbar-track .mx-scrollbar-thumb{position:absolute;width:100%;height:0;cursor:pointer;border-radius:inherit;background-color:rgba(144,147,153,.3);-webkit-transition:background-color .3s;transition:background-color .3s}.mx-zoom-in-down-enter-active,.mx-zoom-in-down-leave-active{opacity:1;-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transition:opacity .3s cubic-bezier(0.23, 1, 0.32, 1),-webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);transition:opacity .3s cubic-bezier(0.23, 1, 0.32, 1),-webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);transition:transform .3s cubic-bezier(0.23, 1, 0.32, 1),opacity .3s cubic-bezier(0.23, 1, 0.32, 1);transition:transform .3s cubic-bezier(0.23, 1, 0.32, 1),opacity .3s cubic-bezier(0.23, 1, 0.32, 1),-webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);-webkit-transform-origin:center top;transform-origin:center top}.mx-zoom-in-down-enter,.mx-zoom-in-down-enter-from,.mx-zoom-in-down-leave-to{opacity:0;-webkit-transform:scaleY(0);transform:scaleY(0)}.mx-datepicker{position:relative;display:inline-block;width:210px}.mx-datepicker svg{width:1em;height:1em;vertical-align:-0.15em;fill:currentColor;overflow:hidden}.mx-datepicker-range{width:320px}.mx-datepicker-inline{width:auto}.mx-input-wrapper{position:relative}.mx-input-wrapper .mx-icon-clear{display:none}.mx-input-wrapper:hover .mx-icon-clear{display:block}.mx-input-wrapper:hover .mx-icon-clear+.mx-icon-calendar{display:none}.mx-input{display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;height:34px;padding:6px 30px;padding-left:10px;font-size:14px;line-height:1.4;color:#555;background-color:#fff;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.mx-input:hover,.mx-input:focus{border-color:#409aff}.mx-input:disabled,.mx-input.disabled{color:#ccc;background-color:#f3f3f3;border-color:#ccc;cursor:not-allowed}.mx-input:focus{outline:none}.mx-input::-ms-clear{display:none}.mx-icon-calendar,.mx-icon-clear{position:absolute;top:50%;right:8px;-webkit-transform:translateY(-50%);transform:translateY(-50%);font-size:16px;line-height:1;color:rgba(0,0,0,.5);vertical-align:middle}.mx-icon-clear{cursor:pointer}.mx-icon-clear:hover{color:rgba(0,0,0,.8)}.mx-datepicker-main{font:14px/1.5 \"Helvetica Neue\",Helvetica,Arial,\"Microsoft Yahei\",sans-serif;color:#73879c;background-color:#fff;border:1px solid #e8e8e8}.mx-datepicker-popup{position:absolute;margin-top:1px;margin-bottom:1px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);box-shadow:0 6px 12px rgba(0,0,0,.175);z-index:2001}.mx-datepicker-sidebar{float:left;-webkit-box-sizing:border-box;box-sizing:border-box;width:100px;padding:6px;overflow:auto}.mx-datepicker-sidebar+.mx-datepicker-content{margin-left:100px;border-left:1px solid #e8e8e8}.mx-datepicker-body{position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.mx-btn-shortcut{display:block;padding:0 6px;line-height:24px}.mx-range-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex}@media(max-width: 750px){.mx-range-wrapper{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}}.mx-datepicker-header{padding:6px 8px;border-bottom:1px solid #e8e8e8}.mx-datepicker-footer{padding:6px 8px;text-align:right;border-top:1px solid #e8e8e8}.mx-calendar{-webkit-box-sizing:border-box;box-sizing:border-box;width:248px;padding:6px 12px}.mx-calendar+.mx-calendar{border-left:1px solid #e8e8e8}.mx-calendar-header,.mx-time-header{-webkit-box-sizing:border-box;box-sizing:border-box;height:34px;line-height:34px;text-align:center;overflow:hidden}.mx-btn-icon-left,.mx-btn-icon-double-left{float:left}.mx-btn-icon-right,.mx-btn-icon-double-right{float:right}.mx-calendar-header-label{font-size:14px}.mx-calendar-decade-separator{margin:0 2px}.mx-calendar-decade-separator:after{content:\"~\"}.mx-calendar-content{position:relative;height:224px;-webkit-box-sizing:border-box;box-sizing:border-box}.mx-calendar-content .cell{cursor:pointer}.mx-calendar-content .cell:hover{color:#73879c;background-color:#f3f9fe}.mx-calendar-content .cell.active{color:#fff;background-color:#1284e7}.mx-calendar-content .cell.in-range,.mx-calendar-content .cell.hover-in-range{color:#73879c;background-color:#dbedfb}.mx-calendar-content .cell.disabled{cursor:not-allowed;color:#ccc;background-color:#f3f3f3}.mx-calendar-week-mode .mx-date-row{cursor:pointer}.mx-calendar-week-mode .mx-date-row:hover{background-color:#f3f9fe}.mx-calendar-week-mode .mx-date-row.mx-active-week{background-color:#dbedfb}.mx-calendar-week-mode .mx-date-row .cell:hover{color:inherit;background-color:transparent}.mx-calendar-week-mode .mx-date-row .cell.active{color:inherit;background-color:transparent}.mx-week-number{opacity:.5}.mx-table{table-layout:fixed;border-collapse:separate;border-spacing:0;width:100%;height:100%;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center}.mx-table th{padding:0;font-weight:500;vertical-align:middle}.mx-table td{padding:0;vertical-align:middle}.mx-table-date td,.mx-table-date th{height:32px;font-size:12px}.mx-table-date .today{color:#2a90e9}.mx-table-date .cell.not-current-month{color:#ccc;background:none}.mx-time{-webkit-box-flex:1;-ms-flex:1;flex:1;width:224px;background:#fff}.mx-time+.mx-time{border-left:1px solid #e8e8e8}.mx-calendar-time{position:absolute;top:0;left:0;width:100%;height:100%}.mx-time-header{border-bottom:1px solid #e8e8e8}.mx-time-content{height:224px;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.mx-time-columns{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;height:100%;overflow:hidden}.mx-time-column{-webkit-box-flex:1;-ms-flex:1;flex:1;position:relative;border-left:1px solid #e8e8e8;text-align:center}.mx-time-column:first-child{border-left:0}.mx-time-column .mx-time-list{margin:0;padding:0;list-style:none}.mx-time-column .mx-time-list::after{content:\"\";display:block;height:192px}.mx-time-column .mx-time-item{cursor:pointer;font-size:12px;height:32px;line-height:32px}.mx-time-column .mx-time-item:hover{color:#73879c;background-color:#f3f9fe}.mx-time-column .mx-time-item.active{color:#1284e7;background-color:transparent;font-weight:700}.mx-time-column .mx-time-item.disabled{cursor:not-allowed;color:#ccc;background-color:#f3f3f3}.mx-time-option{cursor:pointer;padding:8px 10px;font-size:14px;line-height:20px}.mx-time-option:hover{color:#73879c;background-color:#f3f9fe}.mx-time-option.active{color:#1284e7;background-color:transparent;font-weight:700}.mx-time-option.disabled{cursor:not-allowed;color:#ccc;background-color:#f3f3f3}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".mx-icon-left:before,.mx-icon-right:before,.mx-icon-double-left:before,.mx-icon-double-right:before,.mx-icon-double-left:after,.mx-icon-double-right:after{\n  content:\"\";\n  position:relative;\n  top:-1px;\n  display:inline-block;\n  width:10px;\n  height:10px;\n  vertical-align:middle;\n  border-style:solid;\n  border-color:currentColor;\n  border-width:2px 0 0 2px;\n  border-radius:1px;\n  -webkit-box-sizing:border-box;\n  box-sizing:border-box;\n  -webkit-transform-origin:center;\n  transform-origin:center;\n  -webkit-transform:rotate(-45deg) scale(0.7);\n  transform:rotate(-45deg) scale(0.7)\n}\n\n.mx-icon-double-left:after{\n  left:-4px\n}\n\n.mx-icon-double-right:before{\n  left:4px\n}\n\n.mx-icon-right:before,.mx-icon-double-right:before,.mx-icon-double-right:after{\n  -webkit-transform:rotate(135deg) scale(0.7);\n  transform:rotate(135deg) scale(0.7)\n}\n\n.mx-btn{\n  -webkit-box-sizing:border-box;\n  box-sizing:border-box;\n  line-height:1;\n  font-size:14px;\n  font-weight:500;\n  padding:7px 15px;\n  margin:0;\n  cursor:pointer;\n  background-color:transparent;\n  outline:none;\n  border:1px solid rgba(0,0,0,.1);\n  border-radius:4px;\n  color:#73879c;\n  white-space:nowrap\n}\n\n.mx-btn:hover{\n  border-color:#1284e7;\n  color:#1284e7\n}\n\n.mx-btn-text{\n  border:0;\n  padding:0 4px;\n  text-align:left;\n  line-height:inherit\n}\n\n.mx-scrollbar{\n  height:100%\n}\n\n.mx-scrollbar:hover .mx-scrollbar-track{\n  opacity:1\n}\n\n.mx-scrollbar-wrap{\n  height:100%;\n  overflow-x:hidden;\n  overflow-y:auto\n}\n\n.mx-scrollbar-track{\n  position:absolute;\n  top:2px;\n  right:2px;\n  bottom:2px;\n  width:6px;\n  z-index:1;\n  border-radius:4px;\n  opacity:0;\n  -webkit-transition:opacity .24s ease-out;\n  transition:opacity .24s ease-out\n}\n\n.mx-scrollbar-track .mx-scrollbar-thumb{\n  position:absolute;\n  width:100%;\n  height:0;\n  cursor:pointer;\n  border-radius:inherit;\n  background-color:rgba(144,147,153,.3);\n  -webkit-transition:background-color .3s;\n  transition:background-color .3s\n}\n\n.mx-zoom-in-down-enter-active,.mx-zoom-in-down-leave-active{\n  opacity:1;\n  -webkit-transform:scaleY(1);\n  transform:scaleY(1);\n  -webkit-transition:opacity .3s cubic-bezier(0.23, 1, 0.32, 1),-webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);\n  transition:opacity .3s cubic-bezier(0.23, 1, 0.32, 1),-webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);\n  transition:transform .3s cubic-bezier(0.23, 1, 0.32, 1),opacity .3s cubic-bezier(0.23, 1, 0.32, 1);\n  transition:transform .3s cubic-bezier(0.23, 1, 0.32, 1),opacity .3s cubic-bezier(0.23, 1, 0.32, 1),-webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);\n  -webkit-transform-origin:center top;\n  transform-origin:center top\n}\n\n.mx-zoom-in-down-enter,.mx-zoom-in-down-enter-from,.mx-zoom-in-down-leave-to{\n  opacity:0;\n  -webkit-transform:scaleY(0);\n  transform:scaleY(0)\n}\n\n.mx-datepicker{\n  position:relative;\n  display:inline-block;\n  width:210px\n}\n\n.mx-datepicker svg{\n  width:1em;\n  height:1em;\n  vertical-align:-0.15em;\n  fill:currentColor;\n  overflow:hidden\n}\n\n.mx-datepicker-range{\n  width:320px\n}\n\n.mx-datepicker-inline{\n  width:auto\n}\n\n.mx-input-wrapper{\n  position:relative\n}\n\n.mx-input-wrapper .mx-icon-clear{\n  display:none\n}\n\n.mx-input-wrapper:hover .mx-icon-clear{\n  display:block\n}\n\n.mx-input-wrapper:hover .mx-icon-clear+.mx-icon-calendar{\n  display:none\n}\n\n.mx-input{\n  display:inline-block;\n  -webkit-box-sizing:border-box;\n  box-sizing:border-box;\n  width:100%;\n  height:34px;\n  padding:6px 30px;\n  padding-left:10px;\n  font-size:14px;\n  line-height:1.4;\n  color:#555;\n  background-color:#fff;\n  border:1px solid #ccc;\n  border-radius:4px;\n  -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);\n  box-shadow:inset 0 1px 1px rgba(0,0,0,.075)\n}\n\n.mx-input:hover,.mx-input:focus{\n  border-color:#409aff\n}\n\n.mx-input:disabled,.mx-input.disabled{\n  color:#ccc;\n  background-color:#f3f3f3;\n  border-color:#ccc;\n  cursor:not-allowed\n}\n\n.mx-input:focus{\n  outline:none\n}\n\n.mx-input::-ms-clear{\n  display:none\n}\n\n.mx-icon-calendar,.mx-icon-clear{\n  position:absolute;\n  top:50%;\n  right:8px;\n  -webkit-transform:translateY(-50%);\n  transform:translateY(-50%);\n  font-size:16px;\n  line-height:1;\n  color:rgba(0,0,0,.5);\n  vertical-align:middle\n}\n\n.mx-icon-clear{\n  cursor:pointer\n}\n\n.mx-icon-clear:hover{\n  color:rgba(0,0,0,.8)\n}\n\n.mx-datepicker-main{\n  font:14px/1.5 \"Helvetica Neue\",Helvetica,Arial,\"Microsoft Yahei\",sans-serif;\n  color:#73879c;\n  background-color:#fff;\n  border:1px solid #e8e8e8\n}\n\n.mx-datepicker-popup{\n  position:absolute;\n  margin-top:1px;\n  margin-bottom:1px;\n  -webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);\n  box-shadow:0 6px 12px rgba(0,0,0,.175);\n  z-index:2001\n}\n\n.mx-datepicker-sidebar{\n  float:left;\n  -webkit-box-sizing:border-box;\n  box-sizing:border-box;\n  width:100px;\n  padding:6px;\n  overflow:auto\n}\n\n.mx-datepicker-sidebar+.mx-datepicker-content{\n  margin-left:100px;\n  border-left:1px solid #e8e8e8\n}\n\n.mx-datepicker-body{\n  position:relative;\n  -webkit-user-select:none;\n  -moz-user-select:none;\n  -ms-user-select:none;\n  user-select:none\n}\n\n.mx-btn-shortcut{\n  display:block;\n  padding:0 6px;\n  line-height:24px\n}\n\n.mx-range-wrapper{\n  display:-webkit-box;\n  display:-ms-flexbox;\n  display:flex\n}\n\n@media(max-width: 750px){\n  .mx-range-wrapper{\n    -webkit-box-orient:vertical;\n    -webkit-box-direction:normal;\n    -ms-flex-direction:column;\n    flex-direction:column\n  }\n}\n\n.mx-datepicker-header{\n  padding:6px 8px;\n  border-bottom:1px solid #e8e8e8\n}\n\n.mx-datepicker-footer{\n  padding:6px 8px;\n  text-align:right;\n  border-top:1px solid #e8e8e8\n}\n\n.mx-calendar{\n  -webkit-box-sizing:border-box;\n  box-sizing:border-box;\n  width:248px;\n  padding:6px 12px\n}\n\n.mx-calendar+.mx-calendar{\n  border-left:1px solid #e8e8e8\n}\n\n.mx-calendar-header,.mx-time-header{\n  -webkit-box-sizing:border-box;\n  box-sizing:border-box;\n  height:34px;\n  line-height:34px;\n  text-align:center;\n  overflow:hidden\n}\n\n.mx-btn-icon-left,.mx-btn-icon-double-left{\n  float:left\n}\n\n.mx-btn-icon-right,.mx-btn-icon-double-right{\n  float:right\n}\n\n.mx-calendar-header-label{\n  font-size:14px\n}\n\n.mx-calendar-decade-separator{\n  margin:0 2px\n}\n\n.mx-calendar-decade-separator:after{\n  content:\"~\"\n}\n\n.mx-calendar-content{\n  position:relative;\n  height:224px;\n  -webkit-box-sizing:border-box;\n  box-sizing:border-box\n}\n\n.mx-calendar-content .cell{\n  cursor:pointer\n}\n\n.mx-calendar-content .cell:hover{\n  color:#73879c;\n  background-color:#f3f9fe\n}\n\n.mx-calendar-content .cell.active{\n  color:#fff;\n  background-color:#1284e7\n}\n\n.mx-calendar-content .cell.in-range,.mx-calendar-content .cell.hover-in-range{\n  color:#73879c;\n  background-color:#dbedfb\n}\n\n.mx-calendar-content .cell.disabled{\n  cursor:not-allowed;\n  color:#ccc;\n  background-color:#f3f3f3\n}\n\n.mx-calendar-week-mode .mx-date-row{\n  cursor:pointer\n}\n\n.mx-calendar-week-mode .mx-date-row:hover{\n  background-color:#f3f9fe\n}\n\n.mx-calendar-week-mode .mx-date-row.mx-active-week{\n  background-color:#dbedfb\n}\n\n.mx-calendar-week-mode .mx-date-row .cell:hover{\n  color:inherit;\n  background-color:transparent\n}\n\n.mx-calendar-week-mode .mx-date-row .cell.active{\n  color:inherit;\n  background-color:transparent\n}\n\n.mx-week-number{\n  opacity:.5\n}\n\n.mx-table{\n  table-layout:fixed;\n  border-collapse:separate;\n  border-spacing:0;\n  width:100%;\n  height:100%;\n  -webkit-box-sizing:border-box;\n  box-sizing:border-box;\n  text-align:center\n}\n\n.mx-table th{\n  padding:0;\n  font-weight:500;\n  vertical-align:middle\n}\n\n.mx-table td{\n  padding:0;\n  vertical-align:middle\n}\n\n.mx-table-date td,.mx-table-date th{\n  height:32px;\n  font-size:12px\n}\n\n.mx-table-date .today{\n  color:#2a90e9\n}\n\n.mx-table-date .cell.not-current-month{\n  color:#ccc;\n  background:none\n}\n\n.mx-time{\n  -webkit-box-flex:1;\n  -ms-flex:1;\n  flex:1;\n  width:224px;\n  background:#fff\n}\n\n.mx-time+.mx-time{\n  border-left:1px solid #e8e8e8\n}\n\n.mx-calendar-time{\n  position:absolute;\n  top:0;\n  left:0;\n  width:100%;\n  height:100%\n}\n\n.mx-time-header{\n  border-bottom:1px solid #e8e8e8\n}\n\n.mx-time-content{\n  height:224px;\n  -webkit-box-sizing:border-box;\n  box-sizing:border-box;\n  overflow:hidden\n}\n\n.mx-time-columns{\n  display:-webkit-box;\n  display:-ms-flexbox;\n  display:flex;\n  width:100%;\n  height:100%;\n  overflow:hidden\n}\n\n.mx-time-column{\n  -webkit-box-flex:1;\n  -ms-flex:1;\n  flex:1;\n  position:relative;\n  border-left:1px solid #e8e8e8;\n  text-align:center\n}\n\n.mx-time-column:first-child{\n  border-left:0\n}\n\n.mx-time-column .mx-time-list{\n  margin:0;\n  padding:0;\n  list-style:none\n}\n\n.mx-time-column .mx-time-list::after{\n  content:\"\";\n  display:block;\n  height:192px\n}\n\n.mx-time-column .mx-time-item{\n  cursor:pointer;\n  font-size:12px;\n  height:32px;\n  line-height:32px\n}\n\n.mx-time-column .mx-time-item:hover{\n  color:#73879c;\n  background-color:#f3f9fe\n}\n\n.mx-time-column .mx-time-item.active{\n  color:#1284e7;\n  background-color:transparent;\n  font-weight:700\n}\n\n.mx-time-column .mx-time-item.disabled{\n  cursor:not-allowed;\n  color:#ccc;\n  background-color:#f3f3f3\n}\n\n.mx-time-option{\n  cursor:pointer;\n  padding:8px 10px;\n  font-size:14px;\n  line-height:20px\n}\n\n.mx-time-option:hover{\n  color:#73879c;\n  background-color:#f3f9fe\n}\n\n.mx-time-option.active{\n  color:#1284e7;\n  background-color:transparent;\n  font-weight:700\n}\n\n.mx-time-option.disabled{\n  cursor:not-allowed;\n  color:#ccc;\n  background-color:#f3f3f3\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20489,19 +20443,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   // Check for `exports` after `define` in case a build optimizer adds it.
   else {}
 }.call(this));
-
-
-/***/ }),
-
-/***/ "./resources/css/app.css":
-/*!*******************************!*\
-  !*** ./resources/css/app.css ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
 
 
 /***/ }),
@@ -41194,45 +41135,10 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/amd options */
 /******/ 	(() => {
 /******/ 		__webpack_require__.amdO = {};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					var r = fn();
-/******/ 					if (r !== undefined) result = r;
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
@@ -41311,68 +41217,51 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"/js/app": 0,
-/******/ 			"css/app": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
-/******/ 			}
-/******/ 			return __webpack_require__.O(result);
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	})();
-/******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!*****************************!*\
+  !*** ./resources/js/app.js ***!
+  \*****************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue */ "./resources/js/App.vue");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+
+
+
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_6__["default"].component('v-select', (vue_select__WEBPACK_IMPORTED_MODULE_4___default()));
+vue__WEBPACK_IMPORTED_MODULE_6__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_6__["default"].use(vue_axios__WEBPACK_IMPORTED_MODULE_1__["default"], (axios__WEBPACK_IMPORTED_MODULE_2___default()));
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]({
+  mode: 'history',
+  routes: _routes__WEBPACK_IMPORTED_MODULE_3__.routes
+});
+var app = new vue__WEBPACK_IMPORTED_MODULE_6__["default"]({
+  el: '#app',
+  router: router,
+  render: function render(h) {
+    return h(_App_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
+  }
+});
+})();
+
 /******/ })()
 ;
