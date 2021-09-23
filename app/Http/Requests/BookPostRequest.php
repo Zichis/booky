@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Book;
+use App\Rules\UniqueIsbn;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -26,7 +28,7 @@ class BookPostRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'isbn' => ['required', Rule::unique('books')->ignore($this->book)],
+            'isbn' => ["required", new UniqueIsbn($this->book)],
             'authors' => 'required|array',
             'authors.*' => 'required|string|distinct',
             'country' => 'required|string',
