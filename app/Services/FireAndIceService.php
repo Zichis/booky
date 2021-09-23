@@ -18,12 +18,6 @@ class FireAndIceService
             'data' => []
         ];
     }
-    public function prepareData(string $name)
-    {
-        $data = $this->getdata($name);
-
-        return $data;
-    }
 
     public function getdata(string $name)
     {

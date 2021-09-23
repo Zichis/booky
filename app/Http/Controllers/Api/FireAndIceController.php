@@ -26,7 +26,7 @@ class FireAndIceController extends Controller
     {
         $name = $request->get('name');
 
-        $data = $this->fireAndIceService->prepareData($name);
+        $data = $this->fireAndIceService->getdata($name);
 
         return $data;
     }
