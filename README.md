@@ -1,5 +1,7 @@
 ## About this project
 
+![project screenshot](project_screenshot.png)
+
 This project has API endpoints for CRUD for a book model. 
 - Create /api/v1/books POST
 - Read /api/v1/books GET
@@ -23,8 +25,6 @@ It also has an endpoint that gets data from [FireAndIce API](https://anapioficea
 
 - Copy .env.example to .env  
 `cp .env.example .env`
-
-- Change the MIX_API_URL_ROOT variable in your .env to suit your server. (**IMPORTANT**)
 
 - Generate application key  
 `php artisan key:generate`
