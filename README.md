@@ -36,6 +36,9 @@ It also has an endpoint that gets data from [FireAndIce API](https://anapioficea
 - Run migrations  
 `php artisan migrate`
 
+- Seed database
+`php artisan db:seed`
+
 - Run your app  
 `php artisan serve`
 
