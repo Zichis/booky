@@ -2461,7 +2461,6 @@ __webpack_require__.r(__webpack_exports__);
 //apis.js
 
 var api = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-  baseURL: '/',
   headers: {
     'Content-Type': 'application/json'
   }
