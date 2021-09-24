@@ -2096,6 +2096,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
 /* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue2-datepicker/index.css */ "./node_modules/vue2-datepicker/index.css");
+/* harmony import */ var _services_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/api */ "./resources/js/services/api.js");
 //
 //
 //
@@ -2140,6 +2141,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2155,7 +2157,7 @@ __webpack_require__.r(__webpack_exports__);
     addBook: function addBook() {
       var _this = this;
 
-      this.axios.post('/api/v1/books/', this.book).then(function (response) {
+      _services_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('/api/v1/books/', this.book).then(function (response) {
         _this.$router.push({
           name: 'home'
         });
@@ -2182,6 +2184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
 /* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue2-datepicker/index.css */ "./node_modules/vue2-datepicker/index.css");
+/* harmony import */ var _services_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/api */ "./resources/js/services/api.js");
 //
 //
 //
@@ -2226,6 +2229,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2240,7 +2244,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    this.axios.get('/api/v1/books/' + this.$route.params.id).then(function (response) {
+    _services_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/v1/books/' + this.$route.params.id).then(function (response) {
       var book = response.data.data;
 
       if (book.length == 0) {
@@ -2256,7 +2260,7 @@ __webpack_require__.r(__webpack_exports__);
     updateBook: function updateBook() {
       var _this2 = this;
 
-      this.axios.patch('/api/v1/books/' + this.$route.params.id, this.book).then(function (response) {
+      _services_api__WEBPACK_IMPORTED_MODULE_2__["default"].patch('/api/v1/books/' + this.$route.params.id, this.book).then(function (response) {
         _this2.$router.push({
           name: 'home'
         });
@@ -2281,6 +2285,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _services_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/api */ "./resources/js/services/api.js");
 //
 //
 //
@@ -2299,6 +2304,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2308,7 +2314,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    this.axios.get('/api/v1/books/').then(function (response) {
+    _services_api__WEBPACK_IMPORTED_MODULE_0__["default"].get('/api/v1/books/').then(function (response) {
       _this.books = response.data.data;
     });
   },
@@ -2316,7 +2322,7 @@ __webpack_require__.r(__webpack_exports__);
     deleteBook: function deleteBook(id) {
       var _this2 = this;
 
-      this.axios["delete"]('/api/v1/books/' + id).then(function (response) {
+      _services_api__WEBPACK_IMPORTED_MODULE_0__["default"]["delete"]('/api/v1/books/' + id).then(function (response) {
         var i = _this2.books.map(function (item) {
           return item.id;
         }).indexOf(id);
@@ -2436,6 +2442,31 @@ var routes = [{
   path: '/add',
   component: _views_Add_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
 }];
+
+/***/ }),
+
+/***/ "./resources/js/services/api.js":
+/*!**************************************!*\
+  !*** ./resources/js/services/api.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//apis.js
+
+var api = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
+  baseURL: '/',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (api);
 
 /***/ }),
 

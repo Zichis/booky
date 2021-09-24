@@ -45,6 +45,7 @@
 <script>
 import DatePicker from 'vue2-datepicker';
 import 'vue2-datepicker/index.css';
+import api from '../services/api';
 
 export default {
     components: { DatePicker },
@@ -55,7 +56,7 @@ export default {
     },
     methods: {
         addBook() {
-            this.axios
+            api
                 .post('/api/v1/books/', this.book)
                 .then((response) => {
                     this.$router.push({name: 'home'});

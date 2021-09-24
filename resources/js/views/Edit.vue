@@ -45,6 +45,7 @@
 <script>
 import DatePicker from 'vue2-datepicker';
 import 'vue2-datepicker/index.css';
+import api from '../services/api';
 
 export default {
     components: { DatePicker },
@@ -54,22 +55,20 @@ export default {
         }
     },
     mounted() {
-        this.axios
-                .get('/api/v1/books/' + this.$route.params.id)
-                .then((response) => {
-                    let book = response.data.data;
+        api.get('/api/v1/books/' + this.$route.params.id)
+            .then((response) => {
+                let book = response.data.data;
 
-                    if (book.length == 0) {
-                        this.$router.push({name: 'home'});
-                    }
+                if (book.length == 0) {
+                    this.$router.push({name: 'home'});
+                }
 
-                    this.book = response.data.data;
-                });
+                this.book = response.data.data;
+            });
     },
     methods: {
         updateBook() {
-            this.axios
-                .patch('/api/v1/books/' + this.$route.params.id, this.book)
+            api.patch('/api/v1/books/' + this.$route.params.id, this.book)
                 .then((response) => {
                     this.$router.push({name: 'home'});
                 })

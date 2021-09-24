@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import api from '../services/api'
+
 export default {
     data() {
         return {
@@ -24,7 +26,7 @@ export default {
         }
     },
     mounted() {
-        this.axios
+        api
             .get('/api/v1/books/')
             .then((response) => {
                 this.books = response.data.data;
@@ -32,7 +34,7 @@ export default {
     },
     methods: {
         deleteBook(id) {
-            this.axios
+            api
                 .delete('/api/v1/books/' + id)
                 .then(response => {
                     let i = this.books.map(item => item.id).indexOf(id);
