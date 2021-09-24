@@ -14,6 +14,7 @@
             <div class="mb-4">
                 <label for="authos" class="block text-gray-600 text-sm">Authors</label>
                 <v-select class="" taggable multiple v-model="book.authors"/>
+                <p class="text-xs text-green-500 my-1">Type name and press enter.</p>
             </div>
             <div class="mb-4">
                 <label for="country" class="block text-gray-600 text-sm">Country</label>
