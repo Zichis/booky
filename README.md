@@ -45,7 +45,10 @@ It also has an endpoint that gets data from [FireAndIce API](https://anapioficea
 - Visit localhost:8000 (or the host you configured)
 
 ### Testing
-- Create a database for testing with the name **fireandice_test** (or you can change the name in your .env)
+- Create a separate env file for testing .env.testing
+`cp .env.example .env.testing`
+
+- Create a database for testing according to the values in .env.testing (i.e DB_DATABASE, DB_USERNAME, DE_PASSWORD)
 
 - Run tests  
 `composer app-test`
